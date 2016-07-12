@@ -203,17 +203,22 @@ Below is the content of overview.component.ts with comments within:
 ```
 #!typescript
 // Import modules from Angular packages
-import { Component, AfterViewInit } from '@angular/core'; // Component is used to decorate the component to be exported with an object containing several properties(e.g. selector, template).
+// Component is used to decorate the component to be exported with an object containing several properties(e.g. selector, template).
+// AfterViewInit is implemented by the component with ngAfterViewInit() method to do something after the view of the component is loaded.
+import { Component, AfterViewInit } from '@angular/core';
+// Router is used to let user navigate through components.
 import { Router } from '@angular/router';
 
+// Import components to be viewed inside this component
 import { PartCctvComponent } from './part-cctv.component';
 import { PartWaterComponent } from './part-water.component';
 import { PartAirComponent } from './part-air.component';
 import { PartAverageComponent } from './part-average.component';
 import { PartLogisticsComponent } from './part-logistics.component';
 
+// Component decorator
 @Component({
-    selector: 'div.m-t-md',
+    selector: 'div.m-t-md', // CSS selector of HTML element in which the component is viewed
     templateUrl: 'app/overview.component.html',
     styles: [
         `
