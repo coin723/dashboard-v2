@@ -26,9 +26,6 @@ Then all modules and setting files needed should be installed. Without these mod
             <meta charset="UTF-8" />
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <meta name="description" content="" />
-            <meta name="keywords" content="" />
-            <meta name="author" content="" />
             ...
             <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet" />
             
@@ -178,6 +175,28 @@ Then all modules and setting files needed should be installed. Without these mod
                     return Observable.throw(errMsg);
                 }
             }
+
+    * __Router__ lets user navigate through the web site's components based on defined __routes__, each element of which contains path and component to direct to generally.
+
+            import { provideRouter, RouterConfig } from '@angular/router';
+
+            import { OverviewComponent } from './overview.component';
+
+            const routes: RouterConfig = [
+                {
+                    path: '',
+                    redirectTo: 'overview',
+                    terminal: true
+                },
+                {
+                    path: 'overview',
+                    component: OverviewComponent
+                }
+            ];
+
+            export const APP_ROUTER_PROVIDERS = [
+                provideRouter(routes)
+            ];
 
 
 ### Contribution guidelines ###
