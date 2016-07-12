@@ -97,8 +97,18 @@ Then all modules and setting files needed should be installed. Without these mod
                 APP_ROUTER_PROVIDERS
             ]);
 
-* Deployment instructions (continued)
-    * Each page consists of 'components'. 
+    * Each page consists of 'components'. For a component, .ts file matching to the component is the core part. A component may include separate template file(.html) or stylesheet(.css) to implement itself into the web page. It is a common convention to name such file as same as that of related component's .ts file.
+
+            import { Component } from '@angular/core';
+
+            @Component({
+                selector: 'div.cctv',
+                templateUrl: 'app/part-cctv.component.html'
+            })
+            export class PartCctvComponent {
+
+            }
+
 
 ### Contribution guidelines ###
 
