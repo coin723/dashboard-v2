@@ -127,7 +127,6 @@ Then all modules and setting files needed should be installed. Without these mod
                     private http: Http
                 ) {}
 
-                //private rootUrl = 'http://54.199.243.128/';
                 private rootUrl = 'http://118.44.187.55/';
                 private farmListUrl = 'api/get/farm/list';
                 private waterHistoryUrl = 'api/get/watertank/history/graph'
@@ -137,31 +136,15 @@ Then all modules and setting files needed should be installed. Without these mod
                 ]
 
                 getFarmList(): Observable<any> {
-                    let queryUrl = this.rootUrl + this.farmListUrl;
-
-                    return this.http.get(queryUrl)
-                        .map(this.extractData)
-                        .catch(this.handleError);
+                    ...
                 }
 
                 getWaterHistory(watertank_id: number, start_time: string, end_time: string, unit: string): Observable<{}> {
-                    if(unit === undefined) unit = 'hour';
-
-                    let params = new URLSearchParams();
-                    params.set('watertank_id', String(watertank_id));
-                    params.set('start_time', start_time);
-                    params.set('end_time', end_time);
-                    params.set('unit', unit || 'hour');
-
-                    let queryUrl = this.attachUrl(this.waterHistoryUrl);
-
-                    return this.http.get(queryUrl)
-                        .map(this.extractData)
-                        .catch(this.handleError);
+                    ...
                 }
 
                 getWeatherForecast() {
-        
+                    ...
                 }
 
                 getMockWaterHistory() {
