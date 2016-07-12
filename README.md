@@ -29,13 +29,7 @@ Then all modules and setting files needed should be installed. Without these mod
             <meta name="description" content="" />
             <meta name="keywords" content="" />
             <meta name="author" content="" />
-        
-            <title>
-              
-                Overview &middot; 
-              
-            </title>
-    
+            ...
             <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet" />
             
             <link href="assets/css/toolkit-light.min.css" rel="stylesheet" />
