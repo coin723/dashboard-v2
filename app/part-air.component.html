@@ -1,0 +1,18 @@
+<div class="col-md-8 p-r-0 p-l-0">
+    <div *ngFor="let key of airGraph_mainKeys" class="col-md-12 p-r-0 p-l">
+        <div class="statcard statcard-success p-a-lg m-b">
+            <span class="statcard-desc">{{key | keyDisplay}}</span>
+            <h4 class="statcard-number">
+                {{airGraph_main[key] | valueDisplay: key}}
+            </h4>
+        </div>
+    </div>
+</div>
+<div *ngFor="let key of airGraph_subKeys" class="col-md-4 p-r-0 p-l">
+    <div class="statcard statcard-success p-a-lg m-b">
+        <span class="statcard-desc">{{key | keyDisplay}}</span>
+        <h4 class="statcard-number">
+            {{airGraph_sub[key] | valueDisplay: key}}
+        </h4>
+    </div>
+</div>

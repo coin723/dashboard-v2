@@ -1,0 +1,8 @@
+<div *ngFor="let key of wholeAvg_keys" class="col-md-2 p-r-0 p-l">
+    <div class="statcard statcard-primary p-a-lg m-b">
+        <span class="statcard-desc">{{key | keyDisplay}}</span>
+        <h4 class="statcard-number">
+            {{wholeAvg[key] | valueDisplay: key}}
+        </h4>
+    </div>
+</div>

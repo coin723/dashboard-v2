@@ -1,0 +1,8 @@
+<div *ngFor="let key of logistics_keys" class="col-md-12 p-r-0 p-l">
+    <div class="statcard statcard-info p-a-lg m-b">
+        <span class="statcard-desc">{{key | keyDisplay}}</span>
+        <h4 class="statcard-number">
+            {{logistics[key] | valueDisplay: key}}
+        </h4>
+    </div>
+</div>
