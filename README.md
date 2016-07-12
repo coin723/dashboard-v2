@@ -199,7 +199,7 @@ Then all modules and setting files needed should be installed. Without these mod
             ];
 
 
-### Contribution guidelines ###
+### Contribution guidelines ### (to be done maybe)
 
 * Writing tests
 * Code review
