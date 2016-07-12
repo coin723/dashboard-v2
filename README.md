@@ -73,10 +73,32 @@ Then all modules and setting files needed should be installed. Without these mod
 
 * Dependencies
     * [Angular](https://angular.io)
-    * [Bootstrap](http://v4-alpha.getbootstrap.com)
-* Database configuration
+    * [Bootstrap](http://v4-alpha.getbootstrap.com) (fetched from CDN by <link> and <script> tags)
+    * [Bootstrap Dashboard Theme](http://themes.getbootstrap.com/products/dashboard) (should be purchased)
+    * [jQuery](http://jquery.com) (fetched from CDN by <script> tag)
+    * [Chart.js](http://chartjs.org) (fetched from CDN by <script> tag)
+        * Chart.js is required by Bootstrap Dashboard Theme. Originally it implements Chart.js v1, but now the toolkit of the theme is adjusted to work with Chart.js v2. However it is not tested yet.
+
+* Database configuration(?)
+    * This dashboard is to use API to retrieve data. This process can be done through XMLHttpRequest with CORS by built-in HTTP client module of Angular, or any other possible ways.
 * How to run tests
+    * This site should be able to be served even with simple HTTP server. (e.g. http-server)
 * Deployment instructions
+    * [Architecture Overview](https://angular.io/docs/ts/latest/guide/architecture.html) may help understanding the code.
+    * Actual pages are rendered by accordingly executing .js files in /app directory. Each of these is derived from paired .ts files.
+    * main.ts is the main file to fetch and order other .ts files.
+
+            import { bootstrap }    from '@angular/platform-browser-dynamic';
+            
+            import { AppComponent } from './app.component'; // Actually from './app.component.ts'; it is pre-configured '.ts' as default extension
+            import { APP_ROUTER_PROVIDERS } from './app.routes'; // Actually from './app.routes'
+            
+            bootstrap(AppComponent, [
+                APP_ROUTER_PROVIDERS
+            ]);
+
+      
+    * Each page consists of 'components'. 
 
 ### Contribution guidelines ###
 
