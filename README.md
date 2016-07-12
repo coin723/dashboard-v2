@@ -90,8 +90,8 @@ Then all modules and setting files needed should be installed. Without these mod
 
             import { bootstrap }    from '@angular/platform-browser-dynamic';
             
-            import { AppComponent } from './app.component'; // Actually from './app.component.ts'; it is pre-configured '.ts' as default extension
-            import { APP_ROUTER_PROVIDERS } from './app.routes'; // Actually from './app.routes'
+            import { AppComponent } from './app.component'; //Actually from './app.component.ts'; it is pre-configured '.ts' as default extension
+            import { APP_ROUTER_PROVIDERS } from './app.routes'; //Actually from './app.routes'
             
             bootstrap(AppComponent, [
                 APP_ROUTER_PROVIDERS
