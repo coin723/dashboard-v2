@@ -10,11 +10,18 @@ This is the guide for building and running new dashboard.
 
 ### How do I get set up? ###
 
-* Angular(v2.0.0-rc.4) and Bootstrap(v4.0.0-alpha.2) are used.
+* Given the source files within a directory, run this command at the command line at the location of that directory:
+
+        npm install
+Then all modules and setting files needed should be installed. Without these modules the web pages cannot be rendered properly. Surely this step is needed just once as long as the installed files exist.
+
+    After installation of modules and etc., it can be viewed through Safari and Edge (and Chrome for mobile devices).
+
+* Configuration
+
+* Dependencies
     * [Angular](https://angular.io)
     * [Bootstrap](http://v4-alpha.getbootstrap.com)
-* Configuration
-* Dependencies
 * Database configuration
 * How to run tests
 * Deployment instructions
