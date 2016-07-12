@@ -86,7 +86,7 @@ Then all modules and setting files needed should be installed. Without these mod
 * Deployment instructions
     * [Architecture Overview](https://angular.io/docs/ts/latest/guide/architecture.html) may help understanding the Angular code.
     * Actual pages are rendered by accordingly executing .js files in /app directory. Each of these is derived from paired .ts files.
-    * main.ts is the main file to fetch and order other .ts files.
+    * main.ts is the main file fetching and organising other .ts files.
         
             import { bootstrap }    from '@angular/platform-browser-dynamic';
         
