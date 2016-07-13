@@ -70,6 +70,7 @@ Then all modules and setting files needed should be installed. Without these mod
 
 * Dependencies (list from package.json)
     * [Angular](https://angular.io)
+    * [angular2 in-memory-web-api](https://github.com/angular/in-memory-web-api) (may used to build mock service for some tests; not likely to be essential in public builds)
     * [Bootstrap](http://v4-alpha.getbootstrap.com) (fetched from CDN by <link> and <script> tags)
     * [Bootstrap Dashboard Theme](http://themes.getbootstrap.com/products/dashboard) (should be purchased)
     * [core-js](https://github.com/zloirock/core-js)
@@ -84,7 +85,7 @@ Then all modules and setting files needed should be installed. Without these mod
 * Development Dependencies (list from package.json)
     * [Concurrently](https://github.com/kimmobrunfeldt/concurrently) (used in configuration for 'npm start' command; maybe not necessary)
     * [lite-server](https://github.com/johnpapa/lite-server) (not necessary; you may use any server on your test, publish, etc.)
-    * [Typings](https://github.com/typings/typings)
+    * [Typings](https://github.com/typings/typings) (managing TypeScript's type definition; once the final version of .js files are published, this may be of no use)
     * [TypeScript](http://www.typescriptlang.org/)
 
 * Database configuration(?)
