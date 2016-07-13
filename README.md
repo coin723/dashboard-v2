@@ -223,7 +223,7 @@ import { Component, AfterViewInit } from '@angular/core';
 // Router is used to let user navigate through components.
 import { Router } from '@angular/router';
 
-// Import components to be viewed inside this component
+// Import components those are to be viewed inside this component
 import { PartCctvComponent } from './part-cctv.component';
 import { PartWaterComponent } from './part-water.component';
 import { PartAirComponent } from './part-air.component';
