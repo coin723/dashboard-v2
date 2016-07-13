@@ -212,6 +212,8 @@ Then all modules and setting files needed should be installed. Without these mod
                 provideRouter(routes)
             ];
 
+With the current `package.json`, `npm start` will automatically generate .js files from .ts files - which is actually done by `tsc`. And any change occurred while the server initiated by the command is turned on will be applied to web browser's view by automatic refresh without restarting the server.
+
 Below is the content of overview.component.ts with comments within:
 
 ```
