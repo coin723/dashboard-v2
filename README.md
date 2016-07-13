@@ -85,8 +85,8 @@ Then all modules and setting files needed should be installed. Without these mod
 * Development Dependencies (list from package.json)
     * [Concurrently](https://github.com/kimmobrunfeldt/concurrently) (used in configuration for 'npm start' command; maybe not necessary)
     * [lite-server](https://github.com/johnpapa/lite-server) (not necessary; you may use any server on your test, publish, etc.)
-    * [Typings](https://github.com/typings/typings) (managing TypeScript's type definition; once the final version of .js files are published, this may be of no use)
     * [TypeScript](http://www.typescriptlang.org/)
+    * [Typings](https://github.com/typings/typings) (managing TypeScript's type definition; once the final version of .js files are published, this may be of no use)
 
 * Database configuration(?)
     * This dashboard is to use API to retrieve data. This process can be done through XMLHttpRequest with CORS by built-in HTTP client module of Angular, or any other possible ways.
