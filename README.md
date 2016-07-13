@@ -96,8 +96,8 @@ Then all modules and setting files needed should be installed. Without these mod
     * [Architecture Overview](https://angular.io/docs/ts/latest/guide/architecture.html) may help understanding the Angular code.
     * Bootstrap's grid system is essential here determining each element's size. [Follow this link](http://v4-alpha.getbootstrap.com/layout/grid/) to take a look of the document describing the grid system of Bootstrap 4.
     * Documentation for Bootstrap Dashboard Theme is [here](https://bootstrap-themes.github.io/dashboard/docs/index.html). Pictograms, dividers, status cards, and modals(not yet implemented) are from the theme. Get yourself reminded about that the source files are not free. It should be purchased.
-    * Actual pages are rendered by accordingly executing .js files in /app directory. Each of these is derived from paired .ts files.
-    * main.ts is the main file fetching and organising other .ts files.
+    * Actual pages are rendered by accordingly executing .js files in /app directory. Each of these is derived from paired `.ts` files.
+    * `main.ts` is the main file fetching and organising other `.ts` files.
         
             import { bootstrap }    from '@angular/platform-browser-dynamic';
         
@@ -108,7 +108,7 @@ Then all modules and setting files needed should be installed. Without these mod
                 APP_ROUTER_PROVIDERS
             ]);
 
-    * Each page consists of __components__. For a component, .ts file matching to the component is the core part. A component may include separate template file(.html) or stylesheet(.css) to implement itself into the web page. It is a common convention to name such file as same as that of related component's .ts file.
+    * Each page consists of __components__. For a component, `.ts` file matching to the component is the core part. A component may include separate template file(.html) or stylesheet(.css) to implement itself into the web page. It is a common convention to name such file as same as that of related component's `.ts` file.
 
             import { Component } from '@angular/core';
 
@@ -212,9 +212,9 @@ Then all modules and setting files needed should be installed. Without these mod
                 provideRouter(routes)
             ];
 
-With the current `package.json`, `npm start` will automatically generate .js files from .ts files - which is actually done by `tsc`. And any change occurred while the server initiated by the command is turned on will be applied to web browser's view by automatic refresh without restarting the server.
+With the current `package.json`, `npm start` will automatically generate .js files from `.ts` files - which is actually done by `tsc`. And any change occurred while the server initiated by the command is turned on will be applied to web browser's view by automatic refresh without restarting the server.
 
-Below is the content of overview.component.ts with comments within:
+Below is the content of `overview.component.ts` with comments within:
 
 ```
 #!typescript
