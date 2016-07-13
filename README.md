@@ -68,13 +68,24 @@ Then all modules and setting files needed should be installed. Without these mod
           </body>
         </html>
 
-* Dependencies
+* Dependencies (list from package.json)
     * [Angular](https://angular.io)
     * [Bootstrap](http://v4-alpha.getbootstrap.com) (fetched from CDN by <link> and <script> tags)
     * [Bootstrap Dashboard Theme](http://themes.getbootstrap.com/products/dashboard) (should be purchased)
-    * [jQuery](http://jquery.com) (fetched from CDN by <script> tag)
+    * [core-js](https://github.com/zloirock/core-js)
     * [Chart.js](http://chartjs.org) (fetched from CDN by <script> tag)
         * Chart.js is required by Bootstrap Dashboard Theme. Originally it implements Chart.js v1, but now the toolkit of the theme is adjusted to work with Chart.js v2. However it is not tested yet.
+    * [jQuery](http://jquery.com) (fetched from CDN by <script> tag)
+    * [Metadata Reflection API](https://github.com/rbuckton/ReflectDecorators)
+    * [The Reactive Extensions for JavaScript (RxJS)](https://github.com/Reactive-Extensions/RxJS)
+    * [SystemJS](https://github.com/systemjs/systemjs)
+    * [Zone.js](https://github.com/btford/zone.js/)
+
+* Development Dependencies (list from package.json)
+    * [Concurrently](https://github.com/kimmobrunfeldt/concurrently) (used in configuration for 'npm start' command; maybe not necessary)
+    * [lite-server](https://github.com/johnpapa/lite-server) (not necessary; you may use any server on your test, publish, etc.)
+    * [Typings](https://github.com/typings/typings)
+    * [TypeScript](http://www.typescriptlang.org/)
 
 * Database configuration(?)
     * This dashboard is to use API to retrieve data. This process can be done through XMLHttpRequest with CORS by built-in HTTP client module of Angular, or any other possible ways.
