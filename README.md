@@ -71,7 +71,7 @@ Then all modules and setting files needed should be installed. Without these mod
 * Dependencies (list from package.json)
     * [Angular](https://angular.io)
     * [angular2 in-memory-web-api](https://github.com/angular/in-memory-web-api) (may used to build mock service for some tests; not likely to be essential in public builds)
-    * [Bootstrap](http://v4-alpha.getbootstrap.com) (fetched from CDN by <link> and <script> tags)
+    * [Bootstrap](http://v4-alpha.getbootstrap.com) (merged into `toolkit-light.min.css` and `toolkit.min.js`)
     * [Bootstrap Dashboard Theme](http://themes.getbootstrap.com/products/dashboard) (should be purchased)
     * [core-js](https://github.com/zloirock/core-js)
     * [Chart.js](http://chartjs.org) (fetched from CDN by <script> tag)
