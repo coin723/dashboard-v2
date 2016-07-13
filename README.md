@@ -232,8 +232,9 @@ import { PartLogisticsComponent } from './part-logistics.component';
 
 // Component decorator
 @Component({
-    selector: 'div.m-t-md', // CSS selector of HTML element in which the component is viewed
-    templateUrl: 'app/overview.component.html',
+    selector: 'div.m-t-md', // CSS selector of HTML element in which the component is viewed. If corresponding element exists, the component is viewed inside that element. If not, the component may not be viewed anywhere.
+    // Such selector does not have to indicate 'pure-HTML' element; for example, <my-app> or whatever you prefer can be used.
+    templateUrl: 'app/overview.component.html', // Location of HTML file by which the component is visualised. You can use 'template' property instead, assigning your own HTML code string as its value.
     styles: [
         `
         .icon-bar-graph:before {
@@ -244,17 +245,17 @@ import { PartLogisticsComponent } from './part-logistics.component';
             background-color: #D9E8E1;
         }
         `
-    ],
+    ], // CSS style configuration. This can be replaced by 'styleUrls' with an array of locations of .css files to be referred as its value.
     directives: [
         PartCctvComponent,
         PartWaterComponent,
         PartAirComponent,
         PartAverageComponent,
         PartLogisticsComponent
-    ]
+    ] // This could be considered as the list of classes - components, services, etc. - this component refers to render itself.
 })
-export class OverviewComponent implements AfterViewInit {
-    ngAfterViewInit() {
+export class OverviewComponent implements AfterViewInit { // Export OverviewComponent as a class and let it implement AfterViewInit
+    ngAfterViewInit() { // When all of views set to be loaded in this component become complete, do the below contained in the brackets
         let element = <HTMLElement>document.querySelector('.col-md-8 .overview-component');
         element.style.height = Number(window.getComputedStyle(document.querySelector('.col-md-4 .overview-component')).getPropertyValue('height').match(/[0-9]+/)[0]) - Number(window.getComputedStyle(document.querySelector('.col-md-4 .statcard')).getPropertyValue('height').match(/[0-9]+/)[0]) - Number(window.getComputedStyle(document.querySelector('.col-md-8 .overview-component.main .hr-divider')).getPropertyValue('line-height').match(/[0-9]+/)[0]) - Number(window.getComputedStyle(document.querySelector('.col-md-4 .statcard')).getPropertyValue('margin-bottom').match(/[0-9]+/)[0]) - Number(window.getComputedStyle(document.querySelector('.col-md-8 .overview-component.main .average')).getPropertyValue('margin-top').match(/[0-9]+/)[0]) + 'px';
     }
