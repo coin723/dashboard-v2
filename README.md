@@ -298,7 +298,7 @@ The video and audio stream is embedded into CCTV component of current build by <
 </div>
 ```
 
-Before use get the video or the audio, it should be confirmed that the stream is open. The audio stream seems always open by default, but that for the video is not. The video stream is closed when there are no client getting the stream for some time. To open the stream, use this URL at any client - even without SID:
+Before use get the video or the audio, it should be confirmed that the stream is open. The audio stream seems always open by default, but that for the video is not. The video stream is closed when there are no client getting the stream for some time. To open the stream, use this URL at any client with or without SID:
 
     http://{{IP address of the NAS}}:{set port number which is 5000 by default}}/webapi/SurveillanceStation/videoStreaming.cgi?&api=SYNO.SurveillanceStation.VideoStream&version=1&method=Open&cameraId={{camera ID managed by Surveillance Station}}&format=hls
 
