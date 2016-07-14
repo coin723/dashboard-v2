@@ -268,7 +268,7 @@ export class OverviewComponent implements AfterViewInit { // Export OverviewComp
 ### CCTV implementation tips ###
 For the purpose of test, we have used Synology Surveillance Station as a solution for CCTV management and streaming service. Streaming is utilised through the Web API of the system.
 
-Given the IP address, correct port number, camera ID, and session ID, using this address gets the video streaming by GET method:
+Given the IP address, correct port number, camera ID, and session ID, using this URL gets the video streaming by GET method:
 
     http://{{IP address of the NAS}}:{{set port number which is 5000 by default}}/webapi/SurveillanceStation/videoStreaming.cgi?api=SYNO.SurveillanceStation.VideoStream&version=1&method=Stream&cameraId={{camera ID managed by Surveillance Station}}&format=hls&_sid={{session ID}}
 
@@ -288,6 +288,7 @@ The video and audio stream is embedded into CCTV component of current build by <
     <div class="w-full" style="text-align: center;">
         <span class="icon icon-triangle-up"></span>
     </div>
+    <!-- Notice that three embeddings below are images. They get the video stream with MJPEG format. -->
     <img src="http://112.165.189.69:5000/webapi/entry.cgi?api=SYNO.SurveillanceStation.VideoStreaming&version=1&method=Stream&format=mjpeg&cameraId=2&_sid=jGf9F7.Sdq1UU1640O1N421701" class="w-full" />
     <img src="http://112.165.189.69:5000/webapi/entry.cgi?api=SYNO.SurveillanceStation.VideoStreaming&version=1&method=Stream&format=mjpeg&cameraId=2&_sid=jGf9F7.Sdq1UU1640O1N421701" class="w-full m-t" />
     <img src="http://112.165.189.69:5000/webapi/entry.cgi?api=SYNO.SurveillanceStation.VideoStreaming&version=1&method=Stream&format=mjpeg&cameraId=2&_sid=jGf9F7.Sdq1UU1640O1N421701" class="w-full m-t" />
@@ -296,6 +297,12 @@ The video and audio stream is embedded into CCTV component of current build by <
     </div>
 </div>
 ```
+
+Session ID(SID) is essential to use API without runtime authentication. SID is sent in the body of response against the authentication query through the Web API. The URL for such authentication looks like:
+
+    http://{{IP address of the NAS}}:{{set port number which is 5000 by default}}/webapi/auth.cgi?api=SYNO.API.Auth&version=6&method=Login&account={{account name}}&passwd={{password}}&session=SurveillanceStation
+
+Once a SID is issued, it can be used by any client until it is expired. However, even whether it is expired at some time or not is not known.
 
 ### Contribution guidelines ###
 (to be done maybe)
