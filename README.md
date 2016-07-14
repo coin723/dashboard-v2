@@ -264,6 +264,13 @@ export class OverviewComponent implements AfterViewInit { // Export OverviewComp
     }
 }
 ```
+
+### CCTV implementation tips ###
+For the purpose of test, we have used Synology Surveillance Station as a solution for CCTV management and streaming service. Streaming is utilised through the Web API of the system.
+
+In the case of the IP address of the NAS being 192.168.0.14, using this address gets the video streaming by GET method:
+
+    http://{{IP address of the NAS}}:{{set port number which is 5000 by default}}/webapi/SurveillanceStation/videoStreaming.cgi?api=SYNO.SurveillanceStation.VideoStream&version=1&method=Stream&cameraId={{camera ID managed by Surveillance Station}}&format=hls&_sid={{session ID}}
                                                                                                                                                             
 ### Contribution guidelines ###
 (to be done maybe)
