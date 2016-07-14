@@ -298,11 +298,19 @@ The video and audio stream is embedded into CCTV component of current build by <
 </div>
 ```
 
+Before use get the video or the audio, it should be confirmed that the stream is open. The audio stream seems always open by default, but that for the video is not. The video stream is closed when there are no client getting the stream for some time. To open the stream, use this URL at any client - even without SID:
+
+    http://{{IP address of the NAS}}:{set port number which is 5000 by default}}/webapi/SurveillanceStation/videoStreaming.cgi?&api=SYNO.SurveillanceStation.VideoStream&version=1&method=Open&cameraId={{camera ID managed by Surveillance Station}}&format=hls
+
+
+
+#### Session ID ####
+
 Session ID(SID) is essential to use API without runtime authentication. SID is sent in the body of response against the authentication query through the Web API. The URL for such authentication looks like:
 
     http://{{IP address of the NAS}}:{{set port number which is 5000 by default}}/webapi/auth.cgi?api=SYNO.API.Auth&version=6&method=Login&account={{account name}}&passwd={{password}}&session=SurveillanceStation
 
-Once a SID is issued, it can be used by any client until it is expired. However, even whether it is expired at some time or not is not known.
+Once a SID is issued, it can be used by any client until it is expired in case - it is not clear whether generated SID is expired at some time or not.
 
 ### Contribution guidelines ###
 (to be done maybe)
