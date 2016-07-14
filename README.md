@@ -272,8 +272,31 @@ Given the IP address, correct port number, camera ID, and session ID, using this
 
     http://{{IP address of the NAS}}:{{set port number which is 5000 by default}}/webapi/SurveillanceStation/videoStreaming.cgi?api=SYNO.SurveillanceStation.VideoStream&version=1&method=Stream&cameraId={{camera ID managed by Surveillance Station}}&format=hls&_sid={{session ID}}
 
+And here's the audio streaming address. 
 
-                                                                                                                                                            
+    http://{{IP address of the NAS}}:{{set port number which is 5000 by default}}/webapi/SurveillanceStation/audioStreaming.cgi?api=SYNO.SurveillanceStation.AudioStream&version=2&method=Stream&cameraId={{camera ID managed by Surveillance Station}}&_sid={{session ID}}
+
+Since the video stream does not contain the audio, both video and audio streaming should be implemented in wherever they are to be played at the same time.
+
+The video and audio stream is embedded into CCTV component of current build by <video> and <audio> tags.
+```
+<div class="col-md-9 m-t">
+    <video src="http://112.165.189.69:5000/webapi/SurveillanceStation/videoStreaming.cgi?api=SYNO.SurveillanceStation.VideoStream&version=1&method=Stream&cameraId=2&format=hls&_sid=jGf9F7.Sdq1UU1640O1N421701" autoplay class="w-full"></video>
+    <audio src="http://112.165.189.69:5000/webapi/SurveillanceStation/audioStreaming.cgi?api=SYNO.SurveillanceStation.AudioStream&version=2&method=Stream&cameraId=2&_sid=jGf9F7.Sdq1UU1640O1N421701" type="audio/mpeg" autoplay hidden></audio>
+</div>
+<div class="col-md-3">
+    <div class="w-full" style="text-align: center;">
+        <span class="icon icon-triangle-up"></span>
+    </div>
+    <img src="http://112.165.189.69:5000/webapi/entry.cgi?api=SYNO.SurveillanceStation.VideoStreaming&version=1&method=Stream&format=mjpeg&cameraId=2&_sid=jGf9F7.Sdq1UU1640O1N421701" class="w-full" />
+    <img src="http://112.165.189.69:5000/webapi/entry.cgi?api=SYNO.SurveillanceStation.VideoStreaming&version=1&method=Stream&format=mjpeg&cameraId=2&_sid=jGf9F7.Sdq1UU1640O1N421701" class="w-full m-t" />
+    <img src="http://112.165.189.69:5000/webapi/entry.cgi?api=SYNO.SurveillanceStation.VideoStreaming&version=1&method=Stream&format=mjpeg&cameraId=2&_sid=jGf9F7.Sdq1UU1640O1N421701" class="w-full m-t" />
+    <div class="w-full" style="text-align: center;">
+        <span class="icon icon-triangle-down"></span>
+    </div>
+</div>
+```
+
 ### Contribution guidelines ###
 (to be done maybe)
 
