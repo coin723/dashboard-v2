@@ -312,6 +312,9 @@ Session ID(SID) is essential to use API without runtime authentication. SID is s
 
 Once a SID is issued, it can be used by any client until it is expired in case - it is not clear whether generated SID is expired at some time or not.
 
+#### Surveillance Web API document ####
+For detail information about the API, refer to the official document stored in [here](https://global.download.synology.com/download/Document/DeveloperGuide/).
+
 ### Contribution guidelines ###
 (to be done maybe)
 
