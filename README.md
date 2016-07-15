@@ -264,6 +264,8 @@ export class OverviewComponent implements AfterViewInit { // Export OverviewComp
     }
 }
 ```
+### Handwritten description of the overview page's architecture
+![overview_architecture.jpg](https://bitbucket.org/repo/RBe5Bj/images/1620926483-overview_architecture.jpg)
 
 ### CCTV implementation tips ###
 For the purpose of test, we have used Synology Surveillance Station as a solution for CCTV management and streaming service. Streaming is utilised through the Web API of the system.
