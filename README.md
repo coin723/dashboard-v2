@@ -93,6 +93,7 @@ Then all modules and setting files needed should be installed. Without these mod
 * How to run tests
     * This site should be able to be served even with simple HTTP server. (e.g. http-server)
 * Deployment instructions
+    * `package.json`, `tsconfig.json`, `typings.json`, and `systemjs.config.js` are essential in this project and are originated from those in [Angular Quickstart](https://angular.io/docs/ts/latest/quickstart.html). 
     * [Architecture Overview](https://angular.io/docs/ts/latest/guide/architecture.html) may help understanding the Angular code.
         ![Architecture](https://angular.io/resources/images/devguide/architecture/overview2.png)
     * Bootstrap's grid system is essential here determining each element's size. [Follow this link](http://v4-alpha.getbootstrap.com/layout/grid/) to take a look of the document describing the grid system of Bootstrap 4.
