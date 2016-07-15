@@ -122,7 +122,7 @@ Then all modules and setting files needed should be installed. Without these mod
 
             }
 
-    * A __service__ functions like a process at runtime, being able to deal with client's requests and etc.
+    * A __service__ functions like a process at runtime, being able to deal with client's requests and etc via components.
 
             import { Injectable } from '@angular/core';
             import { Http, Response, URLSearchParams } from '@angular/http';
