@@ -17,7 +17,7 @@ Then all modules and setting files needed should be installed. Without these mod
 
     After installation of modules and etc., it can be viewed through Safari and Edge (and Chrome for mobile devices).
 
-* Most of explicit and vital configurations are set in index.html:
+* Most of explicit and vital configurations are set in `index.html`:
 
         <!DOCTYPE html>
         <html>
