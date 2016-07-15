@@ -91,7 +91,7 @@ Then all modules and setting files needed should be installed. Without these mod
 * Database configuration(?)
     * This dashboard is to use API to retrieve data. This process can be done through XMLHttpRequest with CORS by built-in HTTP client module of Angular, or any other possible ways.
 * How to run tests
-    * This site should be able to be served even with simple HTTP server. (e.g. http-server)
+    * This site can be served even with simple HTTP server. (e.g. http-server)
 * Deployment instructions
     * `package.json`, `tsconfig.json`, `typings.json`, and `systemjs.config.js` are essential in this project and are originated from those in [Angular Quickstart](https://angular.io/docs/ts/latest/quickstart.html). 
     * [Architecture Overview](https://angular.io/docs/ts/latest/guide/architecture.html) may help understanding the Angular code.
