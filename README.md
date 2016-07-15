@@ -68,7 +68,7 @@ Then all modules and setting files needed should be installed. Without these mod
           </body>
         </html>
 
-* Dependencies (list from package.json)
+* Dependencies (list from package.json) - Only some of these are used explicitly.
     * [Angular](https://angular.io)
     * [angular2 in-memory-web-api](https://github.com/angular/in-memory-web-api) (may used to build mock service for some tests; not likely to be essential in public builds)
     * [Bootstrap](http://v4-alpha.getbootstrap.com) (merged into `toolkit-light.min.css` and `toolkit.min.js`)
