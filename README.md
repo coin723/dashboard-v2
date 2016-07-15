@@ -110,7 +110,7 @@ Then all modules and setting files needed should be installed. Without these mod
                 APP_ROUTER_PROVIDERS
             ]);
 
-    * Each page consists of __components__. For a component, `.ts` file matching to the component is the core part. A component may include separate template file(.html) or stylesheet(.css) to implement itself into the web page. It is a common convention to name such file as same as that of related component's `.ts` file.
+    * Each page consists of __components__. `.ts` file of a component is the core of it. A component may include separate template file(.html) or stylesheet(.css) to implement itself into the web page. It is a common convention to name such file as same as that of related component's `.ts` file.
 
             import { Component } from '@angular/core';
 
