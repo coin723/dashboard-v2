@@ -94,6 +94,7 @@ Then all modules and setting files needed should be installed. Without these mod
     * This site should be able to be served even with simple HTTP server. (e.g. http-server)
 * Deployment instructions
     * [Architecture Overview](https://angular.io/docs/ts/latest/guide/architecture.html) may help understanding the Angular code.
+        ![Architecture](https://angular.io/resources/images/devguide/architecture/overview2.png)
     * Bootstrap's grid system is essential here determining each element's size. [Follow this link](http://v4-alpha.getbootstrap.com/layout/grid/) to take a look of the document describing the grid system of Bootstrap 4.
     * Documentation for Bootstrap Dashboard Theme is [here](https://bootstrap-themes.github.io/dashboard/docs/index.html). Pictograms, dividers, status cards, and modals(not yet implemented) are from the theme. Get yourself reminded about that the source files are not free. It should be purchased.
     * Novice or higher level of TypeScript skill is helpful. Follow the steps in [quick start document](http://www.typescriptlang.org/docs/tutorial.html) of TypeScript to quickly get used to the basics of TypeScript.
