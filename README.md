@@ -15,7 +15,7 @@ This is the guide for building and running new dashboard.
         npm install
 Then all modules and setting files needed should be installed. Without these modules the web pages cannot be rendered properly. Surely this step is needed just once as long as the installed files exist.
 
-    After installation of modules and etc., it can be viewed through Safari and Edge (and Chrome for mobile devices).
+    After installation of modules and etc., it can be viewed through Safari(OS X and iOS), Edge, Chrome(Android and iOS), and stock Android Web browser.
 
 * Most of explicit and vital configurations are set in `index.html`:
 
